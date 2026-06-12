@@ -2,6 +2,7 @@ package com.sii.gym.service;
 
 import com.sii.gym.dto.CreateGymRequest;
 import com.sii.gym.dto.GymResponse;
+import com.sii.gym.dto.RevenueReportResponse;
 import com.sii.gym.mapper.GymMapper;
 import com.sii.gym.model.Gym;
 import com.sii.gym.repository.GymRepository;
@@ -32,5 +33,9 @@ public class GymService {
                 .stream()
                 .map(gymMapper::toResponse)
                 .toList();
+    }
+
+    public List<RevenueReportResponse> getRevenueReport() {
+        return gymRepository.getReports();
     }
 }
