@@ -2,6 +2,10 @@ spring:
   application:
     name: gym
 
+  web:
+    error:
+      include-message: always
+
   datasource:
     url: jdbc:h2:mem:gym_db
     username: sa
