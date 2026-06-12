@@ -2,6 +2,7 @@ package com.sii.gym.controller;
 
 import com.sii.gym.dto.CreateGymRequest;
 import com.sii.gym.dto.GymResponse;
+import com.sii.gym.dto.RevenueReportResponse;
 import com.sii.gym.service.GymService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -26,5 +27,10 @@ public class GymController {
     @GetMapping
     public List<GymResponse> getAllGyms() {
         return gymService.getAllGyms();
+    }
+
+    @GetMapping("/report")
+    public List<RevenueReportResponse> getRevenueReport() {
+        return gymService.getRevenueReport();
     }
 }
