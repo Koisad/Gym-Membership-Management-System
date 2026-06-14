@@ -19,3 +19,5 @@ spring:
     console:
       enabled: true
       path: /db
+      settings:
+        web-allow-others: true
